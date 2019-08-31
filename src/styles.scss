@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+$primary-color: #2F4761;
+$secondary-color: #F7459B;
+$tertiary-color: #B39490;
+$main-font: "Anaheim";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $main-font;
+}
+
+h1 {
+    margin: 50px 0;
+}
+
+p {
+    color: $tertiary-color;
+    margin: 30px 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+
+    input[type=text]::placeholder {    
+        color:$primary-color; 
+    }
+}
+
+.data{ 
+
+    width: 450px;
+    margin: 0 auto;
+
+    ul {
+
+        position: relative;
+
+        li {
+            list-style-type: none;
+            background-color: lighten($tertiary-color, 30%);
+            border-radius: 10px;
+            margin: 6px 30px 6px 0;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .material-icons {
+            position: absolute;    
+            right: 40px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.primary {
+    color: $primary-color;
+}
+
+.btn-secondary {
+    background-color: $secondary-color;
+}
