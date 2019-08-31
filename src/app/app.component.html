@@ -1,11 +1,11 @@
 <div class="container">
   <h1 class="text-center primary">Grocery List</h1>
   <p><span class="bold">I have to buy:</span> {{ grocery.value }}</p>   
-  <form #groceryForm="ngForm" (ngSubmit)="grocerySubmit(grocery.value)">
+  <form #groceryForm="ngForm" (ngSubmit)="grocerySubmit(grocery.value); groceryForm.reset()">
     <div class="form-group">
       <div class="input-group-prepend">
         <input type="text" class="form-control" placeholder="Add..." name="grocery" [(ngModel)]="item" #grocery="ngModel">
-        <button type ="button" class="btn btn-secondary" (click)="addGrocery(grocery.value)"><i class="material-icons">add</i></button>
+        <button type ="button" class="btn btn-secondary" (click)="addGrocery(grocery.value); groceryForm.reset()"><i class="material-icons">add</i></button>
       </div> 
     </div>
   </form>
